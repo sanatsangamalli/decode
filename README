@@ -1,0 +1,35 @@
+decode.c is half of a program which works in unison with encode.c. 
+Essentially, encode.c will compress a file's bytes, and decode.c 
+decodes that compressed file to see the original file's contents. 
+I(Sanat Sangamalli) was the partner that wrote decode.c in this 
+arrangement. Adit Bhagat, my partner wrote encode.c. We implemented
+various data structures for this assignment. For me, I utilized a stack,
+a huffman tree, and a bit vector. I wrote stack, and used the bit vector
+code that I already had from previous assignments during the quarter.
+As for the huffman tree, I wrote some of the methods, and Adit wrote the 
+other ones. I wrote newNode() stepTree(), and used the join() function from
+my partner. All other functions were provided by DDEL. For design purposes,
+I moved the loadTree() function into my main C source file, decode.c. This 
+idea was given to me on piazza by DDEL. For this overall assignment, I would 
+act based upon given arguments in the command line. I would read the input file,
+which was compressed, and then write the original file's contents before it 
+was compressed. If asked, I would also print out the huffman tree and the statistics
+regarding the compressed file. Various header files and snippets of code were provided by
+DDEL, which are all appropriately cited in their respective files. Adit wrote all of
+the queue data structure implementation, parts of the huffman tree implementation, 
+and encode.c, as it was a central part of his part of the assignment. 
+
+Files:
+decode.c: The source file for the main part of my half of the program, written in C.
+encode.c: The source file for the main part of Adit's program, written in C.
+queue.c: The priority queue data structure implementation.
+queue.h: The header file for the priority queue data structure implementation.
+code.h: The header file for code encoded in encode.c.
+stack.c: The C source file for the implementation of the stack data structure.
+stack.h: The header file for the implementation of the stack data structure.
+huffman.c: The C source file for the implementation of the huffman tree data structure.
+huffman.h: The header file for the implementation of the huffman tree data structure.
+bv.c: The C source file for the implementation of the bit vector structure.
+bv.h: The header file for the implementation of the bit vector structure.
+Makefile: File to help make it easier to run multiple programs. 
+README: This README.
